@@ -3,7 +3,11 @@
     class="hero is-medium is-dark color-gradient"
     :style="[colors, text]"
   >
-    <img class="image-banner" src="https://picsum.photos/1200/415" alt="test" />
+    <img
+      class="image-banner "
+      src="https://picsum.photos/1200/415"
+      alt="test"
+    />
     <div class="hero-body">
       <div class="container">
         <h1 class="title">
@@ -94,9 +98,13 @@ h5 {
 }
 
 .container {
-  width: 460px !important;
-  margin-left: 50px !important;
-  padding: 20px;
   background: var(--background);
+  padding: 20px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 460px !important;
+    margin-left: 50px !important;
+  }
 }
 </style>
