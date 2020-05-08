@@ -8,6 +8,14 @@
         >vue-cli documentation</a
       >.
     </p>
+    <br />
+    <p>
+      About TypeScript:
+      <a
+        href="https://blog.logrocket.com/how-to-write-a-vue-js-app-completely-in-typescript/"
+        >A good typescript article</a
+      >
+    </p>
     <h3>Installed CLI Plugins</h3>
     <ul>
       <li>
@@ -64,6 +72,14 @@
           target="_blank"
           rel="noopener"
           >unit-jest</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://buefy.org/documentationt"
+          target="_blank"
+          rel="noopener"
+          >buefy</a
         >
       </li>
     </ul>
@@ -137,6 +153,12 @@ export default class HelloWorld extends Vue {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
 h3 {
   margin: 40px 0 0;
 }

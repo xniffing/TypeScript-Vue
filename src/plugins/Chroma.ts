@@ -1,3 +1,7 @@
 import chroma from "chroma-js";
 
-export const gradientColor = chroma.scale(["#009999", "#0099ff"]);
+const color1 = chroma.random();
+const color2 = chroma.random();
+
+export const gradientColor = chroma.scale([color1, color2]);
+export const textColor = chroma.contrast(color1, "white");
