@@ -3,11 +3,7 @@
     class="hero is-medium is-dark color-gradient"
     :style="[colors, text]"
   >
-    <img
-      class="image-banner "
-      src="https://picsum.photos/1200/415"
-      alt="test"
-    />
+    <img class="image-banner" :src="imageSource" alt="test" />
     <div class="hero-body">
       <div class="container">
         <h1 class="title">
@@ -66,6 +62,16 @@ export default class HeroSection extends Vue {
       "--color2": gradientColor(Math.random()).hex()
     };
   }
+
+  get imageSource(): string {
+    return (
+      "https://picsum.photos/" +
+      window.innerWidth +
+      "/" +
+      (window.innerHeight - 450) +
+      ""
+    );
+  }
 }
 </script>
 
@@ -101,6 +107,7 @@ h5 {
   background: var(--background);
   padding: 20px;
 }
+
 @media screen and (min-width: 768px) {
   .container {
     width: 460px !important;
