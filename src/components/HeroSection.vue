@@ -3,6 +3,7 @@
     class="hero is-medium is-dark color-gradient"
     :style="[colors, text]"
   >
+    <img class="image-banner" src="https://picsum.photos/1200/415" alt="test" />
     <div class="hero-body">
       <div class="container">
         <h1 class="title">
@@ -40,13 +41,15 @@ export default class HeroSection extends Vue {
    * Returns the acceptable contrast ratio to a CSS Variable
    */
   get text(): object {
-    if (textColor > 4.5) {
+    if (textColor > 5) {
       return {
-        "--text-color": "white"
+        "--text-color": "white",
+        "--background": "rgba(0,0,0,0.4)"
       };
     }
     return {
-      "--text-color": "black"
+      "--text-color": "black",
+      "--background": "rgba(255,255,255,0.4)"
     };
   }
 
@@ -82,5 +85,18 @@ h5 {
 .subtitle,
 .note {
   color: var(--text-color) !important;
+}
+.image-banner {
+  position: absolute;
+  height: 475px;
+  width: 100vw;
+  mix-blend-mode: soft-light;
+}
+
+.container {
+  width: 460px !important;
+  margin-left: 50px !important;
+  padding: 20px;
+  background: var(--background);
 }
 </style>

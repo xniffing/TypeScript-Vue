@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <HeroSection title="Home Page" description="This is a Description">
+    <HeroSection title="Dynamic Hero component" description="This is procedurally generated.">
     </HeroSection>
     <HelloWorld class="has-text-centered" msg="This is Cool!"></HelloWorld>
   </div>
