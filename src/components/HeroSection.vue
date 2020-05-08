@@ -3,7 +3,7 @@
     class="hero is-medium is-dark color-gradient"
     :style="[colors, text]"
   >
-    <img class="image-banner" :src="imageSource" alt="test" />
+    <img class="image-banner" :src="imageSource" alt="Image here!" />
     <div class="hero-body">
       <div class="container">
         <h1 class="title">
@@ -68,7 +68,7 @@ export default class HeroSection extends Vue {
       "https://picsum.photos/" +
       window.innerWidth +
       "/" +
-      (window.innerHeight - 450) +
+      (window.innerHeight - 500) +
       ""
     );
   }
