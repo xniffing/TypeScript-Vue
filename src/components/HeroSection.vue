@@ -1,5 +1,8 @@
 <template>
-  <section class="hero is-medium is-dark color-gradient" :style="[colors, text]">
+  <section
+    class="hero is-medium is-dark color-gradient"
+    :style="[colors, text]"
+  >
     <div class="hero-body">
       <div class="container">
         <h1 class="title">
@@ -24,10 +27,13 @@ export default class HeroSection extends Vue {
    */
   @Prop() private title!: string;
   /**
-   * Description of the Helo
+   * Description of the Hero
    */
   @Prop() private description!: string;
 
+  /**
+   * Returns the acceptable contrast ratio to a CSS Variable
+   */
   get text(): object {
     if (textColor > 4.5) {
       return {
@@ -39,6 +45,9 @@ export default class HeroSection extends Vue {
     };
   }
 
+  /**
+   * Returns a random place in the also random scale defined in chroma.JS
+   */
   get colors(): object {
     return {
       "--color1": gradientColor(Math.random()).hex(),
