@@ -11,6 +11,11 @@
         <h2 class="subtitle">
           {{ description }}
         </h2>
+        <h5 class="note">
+          Background Gradient: {{ colors }}
+          <br />
+          Text Color: {{ text }}
+        </h5>
       </div>
     </div>
   </section>
@@ -59,6 +64,9 @@ export default class HeroSection extends Vue {
 
 <style lang="scss">
 .color-gradient {
+  -webkit-animation: colorScale 5s infinite;
+  -o-animation: colorScale 5s infinite;
+  animation: colorScale 5s infinite;
   background: linear-gradient(
     to right,
     var(--color1, #009999),
@@ -66,16 +74,13 @@ export default class HeroSection extends Vue {
   );
 }
 
-.title,
-.subtitle {
-  color: var(--text-color) !important;
+h5 {
+  font-size: 13px !important;
 }
 
-@keyframes colorScale {
-  from {
-  }
-
-  to {
-  }
+.title,
+.subtitle,
+.note {
+  color: var(--text-color) !important;
 }
 </style>
